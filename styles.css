@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-left: 20px;
+}
+
+.carrito {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+}
+
+.carrito span {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2980b9;
+    color: white;
+}
+
+.carrito-header h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.carrito-header button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.carrito-header button:hover {
+    background-color: #c0392b;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+#productos {
+    text-align: center;
+}
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.producto {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.producto p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.producto button {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.producto button:hover {
+    background: #218838;
+}
+
+.carrito {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+}
+
+.carrito span {
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    background-color: #e74c3c;
+    border-radius:28%;
+    padding: 5px 10px;/
+}
+.carrito button {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.carrito button:hover {
+    background: #218838;
+}
+

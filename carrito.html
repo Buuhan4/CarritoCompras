@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="carrito-styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+        <button onclick="window.location.href='index.html'">Cerrar</button>
+    </header>
+
+    <main>
+        <h2>Productos en el carrito</h2>
+        <div id="productos-en-carrito"></div>
+        <h3 id="total">Total: 0€</h3>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </main>
+
+    <script>
+        let carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
+        let productosEnCarritoDiv = document.getElementById("productos-en-carrito");
+
+        function mostrarProductos() {
+            productosEnCarritoDiv.innerHTML = '';
+            let total = 0;
+
+            if (carritoGuardado.length === 0) {
+                productosEnCarritoDiv.innerHTML = "<p>No hay productos en el carrito.</p>";
+            } else {
+                for (let i = 0; i < carritoGuardado.length; i++) {
+                    let producto = carritoGuardado[i];
+                    let productoDiv = document.createElement("div");
+                    productoDiv.innerHTML = `
+                        <p>${producto.nombre} - ${producto.precio}€</p>
+                        <button onclick="quitarProducto(${i})">Eliminar</button>
+                        <button onclick="añadirProducto('${producto.nombre}', ${producto.precio})">Añadir</button>
+                    `;
+                    productosEnCarritoDiv.appendChild(productoDiv);
+                    total += producto.precio;
+                }
+            }
+
+            document.getElementById("total").innerText = `Total: ${total}€`;
+        }
+
+        function vaciarCarrito() {
+            localStorage.removeItem("carrito");
+            carritoGuardado = [];
+            mostrarProductos();
+        }
+
+        function quitarProducto(index) {
+            carritoGuardado.splice(index, 1);
+            localStorage.setItem("carrito", JSON.stringify(carritoGuardado));
+            mostrarProductos();
+        }
+        
+        function añadirProducto(nombre, precio) {
+            carritoGuardado.push({ nombre, precio });
+            localStorage.setItem("carrito", JSON.stringify(carritoGuardado));
+            mostrarProductos();
+        }
+        mostrarProductos();
+    </script>
+</body>
+
+</html>

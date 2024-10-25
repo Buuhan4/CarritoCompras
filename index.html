@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar Productos de Manga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mangas</h1>
+        <div class="carrito">
+            <button onclick="window.location.href='carrito.html'" class="carrito">🛒</button>
+            <span id="carrito-cuenta">0</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="productos">
+            <h2>Productos Disponibles</h2>
+            <div class="productos-container">
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/71lnvXSiITL._AC_UF894,1000_QL80_.jpg" width="200px"
+                        height="300px" alt="Manga 1" />
+                    <h3>Berserk</h3>
+                    <p>Berserk es una historia de batallas épicas, de venganzas, de muerte y de luchas por conseguir el
+                        poder, por conseguir un nombre en una sociedad noble y despreciativa con las clases
+                        “inferiores”.</p>
+                    <p><strong>18€</strong></p>
+                    <button onclick="agregarAlCarrito('Berserk', 18)">Añadir al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/91NxYvUNf6L._AC_UF894,1000_QL80_.jpg" width="200px"
+                        height="300px" alt="Manga 2" />
+                    <h3>One Piece</h3>
+                    <p>One Piece sigue las aventuras de Monkey D. Luffy y su tripulación de piratas en busca del tesoro
+                        legendario conocido como "One Piece", mientras luchan contra enemigos y forjan lazos de amistad
+                        en un mundo lleno de islas y poderes sobrenaturales.</p>
+                    <p><strong>13€</strong></p>
+                    <button onclick="agregarAlCarrito('One Piece', 13)">Añadir al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/81-1jqVHePL._AC_UF894,1000_QL80_.jpg" width="200px"
+                        height="300px" alt="Manga 3" />
+                    <h3>Dragon Ball</h3>
+                    <p>Dragon Ball sigue las aventuras de Goku, un guerrero con cola de mono, mientras busca las esferas
+                        del dragón y lucha contra poderosos enemigos para proteger la Tierra.</p>
+                    <p><strong>16€</strong></p>
+                    <button onclick="agregarAlCarrito('Dragon Ball', 16)">Añadir al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/81qPzeEO5IL._AC_UF894,1000_QL80_.jpg" width="200px"
+                        height="300px" alt="Manga 4" />
+                    <h3>Attack On Titan</h3>
+                    <p>La historia se desarrolla en un mundo ficticio en el que la humanidad está al borde de la
+                        extinción a causa de unas criaturas humanoides denominadas «titanes», lo que obliga a los
+                        supervivientes a refugiarse en tres enormes murallas que impiden el acceso a dichos monstruos.
+                    </p>
+                    <p><strong>12€</strong></p>
+                    <button onclick="agregarAlCarrito('Attack On Titan', 12)">Añadir al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/91nhuMimxjL._AC_UF894,1000_QL80_.jpg" width="200px"
+                        height="300px" alt="Manga 5" />
+                    <h3>Vinland Saga</h3>
+                    <p>Vinland Saga narra la historia de Thorfinn, un joven guerrero vikingo que busca venganza contra
+                        Askeladd, el hombre que mató a su padre, mientras explora temas de guerra, honor y redención.
+                    </p>
+                    <p><strong>15€</strong></p>
+                    <button onclick="agregarAlCarrito('Vinland Saga', 15)"">Añadir al carrito</button>
+                </div>
+
+                <div class=" producto">
+                        <img src="https://m.media-amazon.com/images/I/51tZ6O2-95L._AC_UF894,1000_QL80_.jpg"
+                            width="200px" height="300px" alt="Manga 6" />
+                        <h3>Vagabond</h3>
+                        <p>Vagabond sigue la vida de Miyamoto Musashi, un legendario espadachín japonés, mientras busca
+                            la perfección en el arte de la espada y reflexiona sobre la vida y la muerte en el contexto
+                            del Japón feudal.</p>
+                        <p><strong>17€</strong></p>
+                        <button onclick="agregarAlCarrito('Vagabond', 17)">Añadir al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/81ZNkhqRvVL.jpg" width="200px" height="300px"
+                        alt="Manga 7" />
+                    <h3>Demon Slayer</h3>
+                    <p>Demon Slayer sigue la historia de Tanjiro Kamado, un joven que se convierte en cazador de
+                        demonios después de que su familia es asesinada y su hermana Nezuko es transformada en demonio,
+                        mientras busca una forma de devolverla a la normalidad.</p>
+                    <p><strong>14€</strong></p>
+                    <button onclick="agregarAlCarrito('Demon Slayer', 14)">Añadir al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://www.normaeditorial.com/upload/media/albumes/0001/07/thumb_6547_albumes_big.jpeg"
+                        width="200px" height="300px" alt="Manga 8" />
+                    <h3>Jujutsu Kaisen</h3>
+                    <p>Jujutsu Kaisen cuenta la historia de Yuji Itadori, un estudiante de secundaria que se une a una
+                        escuela de hechicería para combatir maldiciones después de consumir un poderoso objeto maldito y
+                        convertirse en el anfitrión de Sukuna, un temido espíritu maligno.</p>
+                    <p><strong>15€</strong></p>
+                    <button onclick="agregarAlCarrito('Jujutsu Kaisen', 15)">Añadir al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/91Bn7eoQYGL._AC_UF894,1000_QL80_.jpg" width="200px"
+                        height="300px" alt="Manga 9" />
+                    <h3>Naruto</h3>
+                    <p>Naruto sigue la vida de Naruto Uzumaki, un joven ninja que sueña con convertirse en Hokage, el
+                        líder de su aldea, mientras enfrenta desafíos, forja amistades y lucha contra enemigos
+                        poderosos.</p>
+                    <p><strong>12€</strong></p>
+                    <button onclick="agregarAlCarrito('Naruto', 12)">Añadir al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/61b+fzyyv2L._AC_UF894,1000_QL80_.jpg" width="200px"
+                        height="300px" alt="Manga 10" />
+                    <h3>Bleach</h3>
+                    <p>Bleach narra la historia de Ichigo Kurosaki, un adolescente que obtiene los poderes de un Soul
+                        Reaper (Segador de Almas) tras un encuentro con Rukia Kuchiki, y se convierte en protector de
+                        los vivos y los espíritus, luchando contra seres malignos conocidos como Hollows y enfrentándose
+                        a poderosos enemigos en el mundo espiritual.</p>
+                    <p><strong>15€</strong></p>
+                    <button onclick="agregarAlCarrito('Bleach', 15)">Añadir al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://www.normaeditorial.com/upload/media/albumes/0001/05/912566e9eb12f76767469912a8f728a724cdd3a8.jpeg"
+                        width="200px" height="300px" alt="Manga 11" />
+                    <h3>Death Note</h3>
+                    <p>Death Note narra la historia de Light Yagami, un estudiante brillante que encuentra un cuaderno
+                        sobrenatural que le permite matar a cualquier persona cuyo nombre escriba en él, lo que lo lleva
+                        a embarcarse en una misión para eliminar criminales y crear un mundo ideal, mientras es
+                        perseguido por el detective enigmático L.</p>
+                    <p><strong>10€</strong></p>
+                    <button onclick="agregarAlCarrito('Death Note', 10)">Añadir al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/912mJf7tsUL._AC_UF894,1000_QL80_.jpg" width="200px"
+                        height="300px" alt="Manga 12" />
+                    <h3>My Hero Academia</h3>
+                    <p>My Hero Academia narra la historia de Izuku Midoriya, un joven sin poderes en un mundo donde la
+                        mayoría de la población tiene habilidades sobrehumanas, mientras aspira a convertirse en un
+                        héroe y asiste a la Academia U.A. para aprender a ser un gran héroe como su ídolo All Might.</p>
+                    <p><strong>15€</strong></p>
+                    <button onclick="agregarAlCarrito('My Hero Academia', 15)">Añadir al carrito</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        let carrito = [];
+    
+        function agregarAlCarrito(nombre, precio) {
+            let producto = { nombre, precio };
+            carrito.push(producto);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarCarrito();
+        }
+    
+        function actualizarCarrito() {
+            let carritoCuenta = carrito.length;
+            document.getElementById("carrito-cuenta").innerText = carritoCuenta;
+        }
+    
+        window.onload = function () {
+            let carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito = carritoGuardado;
+            actualizarCarrito();
+        };
+    </script>
+</body>
+
+</html>
