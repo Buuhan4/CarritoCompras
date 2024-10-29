@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: #343a40;
+background-color: blueviolet;
     color: #fff;
     padding: 20px 0;
     display: flex;
